@@ -1,0 +1,88 @@
+var _user$project$Luncher$init = {
+	ctor: '_Tuple2',
+	_0: {places: _krisajenkins$remotedata$RemoteData$NotAsked},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$Luncher$Model = function (a) {
+	return {places: a};
+};
+var _user$project$Luncher$HandlePlacesResponse = function (a) {
+	return {ctor: 'HandlePlacesResponse', _0: a};
+};
+var _user$project$Luncher$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		if (_p0.ctor === 'HandlePlacesResponse') {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{places: _p0._0}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{places: _krisajenkins$remotedata$RemoteData$Loading}),
+				_1: A3(_ohanhi$remotedata_http$RemoteData_Http$get, '/api/places/', _user$project$Luncher$HandlePlacesResponse, _user$project$JsonConverter$decodePlacesData)
+			};
+		}
+	});
+var _user$project$Luncher$GetPlaces = {ctor: 'GetPlaces'};
+var _user$project$Luncher$viewPlaces = function (places) {
+	var _p1 = places;
+	switch (_p1.ctor) {
+		case 'Loading':
+			return _elm_lang$html$Html$text('Fetching places...');
+		case 'Success':
+			return _elm_lang$html$Html$text(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'Recieved places: ',
+					_elm_lang$core$Basics$toString(_p1._0)));
+		case 'Failure':
+			return _elm_lang$html$Html$text(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'This went wrong: ',
+					_elm_lang$core$Basics$toString(_p1._0)));
+		default:
+			return A2(
+				_elm_lang$html$Html$button,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Events$onClick(_user$project$Luncher$GetPlaces),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Get places data from the server'),
+					_1: {ctor: '[]'}
+				});
+	}
+};
+var _user$project$Luncher$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('From elm. '),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Luncher$viewPlaces(model.places),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Luncher$main = _elm_lang$html$Html$program(
+	{
+		init: _user$project$Luncher$init,
+		subscriptions: function (_p2) {
+			return _elm_lang$core$Platform_Sub$none;
+		},
+		update: _user$project$Luncher$update,
+		view: _user$project$Luncher$view
+	})();

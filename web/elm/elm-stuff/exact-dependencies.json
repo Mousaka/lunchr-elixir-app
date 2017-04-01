@@ -1,0 +1,9 @@
+{
+    "ohanhi/remotedata-http": "2.0.2",
+    "krisajenkins/remotedata": "4.3.0",
+    "elm-lang/virtual-dom": "2.0.4",
+    "elm-lang/html": "2.0.0",
+    "elm-lang/http": "1.0.0",
+    "NoRedInk/elm-decode-pipeline": "3.0.0",
+    "elm-lang/core": "5.1.1"
+}
