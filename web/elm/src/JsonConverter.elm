@@ -3,11 +3,7 @@ module JsonConverter exposing (..)
 import Json.Encode
 import Json.Decode
 import Json.Decode.Pipeline
-
-
-type alias PlacesData =
-    { data : List Place
-    }
+import Types exposing (..)
 
 
 decodePlacesData : Json.Decode.Decoder PlacesData
@@ -23,14 +19,6 @@ encodePlaces record =
         ]
 
 
-type alias Place =
-    { rating : Float
-    , name : String
-    , id : Int
-    , cuisine : String
-    }
-
-
 decodePlace : Json.Decode.Decoder Place
 decodePlace =
     Json.Decode.Pipeline.decode Place
@@ -40,11 +28,18 @@ decodePlace =
         |> Json.Decode.Pipeline.required "cuisine" (Json.Decode.string)
 
 
-encodePlace : Place -> Json.Encode.Value
-encodePlace record =
+encodePlace1 : Place -> Json.Encode.Value
+encodePlace1 record =
     Json.Encode.object
         [ ( "rating", Json.Encode.float <| record.rating )
         , ( "name", Json.Encode.string <| record.name )
-        , ( "id", Json.Encode.int <| record.id )
+          --        , ( "id", Json.Encode.int <| record.id )
         , ( "cuisine", Json.Encode.string <| record.cuisine )
+        ]
+
+
+encodePlace : Place -> Json.Encode.Value
+encodePlace record =
+    Json.Encode.object
+        [ ( "place", encodePlace1 <| record )
         ]
