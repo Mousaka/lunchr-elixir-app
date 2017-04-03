@@ -9,7 +9,7 @@ import Types exposing (..)
 decodePlacesData : Json.Decode.Decoder PlacesData
 decodePlacesData =
     Json.Decode.Pipeline.decode PlacesData
-        |> Json.Decode.Pipeline.required "data" (Json.Decode.list decodePlace)
+        |> Json.Decode.Pipeline.required "data" (Json.Decode.list decodePlace1)
 
 
 encodePlaces : PlacesData -> Json.Encode.Value
@@ -19,8 +19,14 @@ encodePlaces record =
         ]
 
 
-decodePlace : Json.Decode.Decoder Place
+decodePlace : Json.Decode.Decoder PlaceData
 decodePlace =
+    Json.Decode.Pipeline.decode PlaceData
+        |> Json.Decode.Pipeline.required "data" decodePlace1
+
+
+decodePlace1 : Json.Decode.Decoder Place
+decodePlace1 =
     Json.Decode.Pipeline.decode Place
         |> Json.Decode.Pipeline.required "rating" (Json.Decode.float)
         |> Json.Decode.Pipeline.required "name" (Json.Decode.string)

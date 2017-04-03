@@ -9559,6 +9559,9 @@ var _user$project$Types$Model = F2(
 var _user$project$Types$PlacesData = function (a) {
 	return {data: a};
 };
+var _user$project$Types$PlaceData = function (a) {
+	return {data: a};
+};
 var _user$project$Types$Place = F4(
 	function (a, b, c, d) {
 		return {rating: a, name: b, id: c, cuisine: d};
@@ -9628,7 +9631,7 @@ var _user$project$JsonConverter$encodePlace = function (record) {
 			_1: {ctor: '[]'}
 		});
 };
-var _user$project$JsonConverter$decodePlace = A3(
+var _user$project$JsonConverter$decodePlace1 = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 	'cuisine',
 	_elm_lang$core$Json_Decode$string,
@@ -9645,6 +9648,11 @@ var _user$project$JsonConverter$decodePlace = A3(
 				'rating',
 				_elm_lang$core$Json_Decode$float,
 				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Types$Place)))));
+var _user$project$JsonConverter$decodePlace = A3(
+	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
+	'data',
+	_user$project$JsonConverter$decodePlace1,
+	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Types$PlaceData));
 var _user$project$JsonConverter$encodePlaces = function (record) {
 	return _elm_lang$core$Json_Encode$object(
 		{
@@ -9661,7 +9669,7 @@ var _user$project$JsonConverter$encodePlaces = function (record) {
 var _user$project$JsonConverter$decodePlacesData = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 	'data',
-	_elm_lang$core$Json_Decode$list(_user$project$JsonConverter$decodePlace),
+	_elm_lang$core$Json_Decode$list(_user$project$JsonConverter$decodePlace1),
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Types$PlacesData));
 
 var _user$project$Luncher$viewPlaces = function (places) {

@@ -14,6 +14,11 @@ type alias PlacesData =
     }
 
 
+type alias PlaceData =
+    { data : Place
+    }
+
+
 type alias Place =
     { rating : Float
     , name : String
@@ -46,7 +51,7 @@ emptyAddPlaceForm =
 type Msg
     = GetPlaces
     | HandlePlacesResponse (WebData PlacesData)
-    | HandlePostPlace (WebData Place)
+    | HandlePostPlace (WebData PlaceData)
     | AddPlaceFormUpdate AddPlaceFormMsg
     | AddPlace
 
