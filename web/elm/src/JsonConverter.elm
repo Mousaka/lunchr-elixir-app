@@ -19,6 +19,7 @@ encodePlaces record =
         ]
 
 
+<<<<<<< HEAD:web/elm/src/JsonConverter.elm
 decodePlace : Json.Decode.Decoder PlaceData
 decodePlace =
     Json.Decode.Pipeline.decode PlaceData
@@ -27,6 +28,10 @@ decodePlace =
 
 decodePlace1 : Json.Decode.Decoder Place
 decodePlace1 =
+=======
+decodePlace : Json.Decode.Decoder Place
+decodePlace =
+>>>>>>> 27e8458ea0e91520f272895ef60fe6e738c8fff3:web/elm/src/JsonConverter.elm
     Json.Decode.Pipeline.decode Place
         |> Json.Decode.Pipeline.required "rating" (Json.Decode.float)
         |> Json.Decode.Pipeline.required "name" (Json.Decode.string)
