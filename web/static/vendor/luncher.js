@@ -8287,6 +8287,356 @@ var _elm_lang$html$Html$summary = _elm_lang$html$Html$node('summary');
 var _elm_lang$html$Html$menuitem = _elm_lang$html$Html$node('menuitem');
 var _elm_lang$html$Html$menu = _elm_lang$html$Html$node('menu');
 
+var _elm_lang$html$Html_Attributes$map = _elm_lang$virtual_dom$VirtualDom$mapProperty;
+var _elm_lang$html$Html_Attributes$attribute = _elm_lang$virtual_dom$VirtualDom$attribute;
+var _elm_lang$html$Html_Attributes$contextmenu = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'contextmenu', value);
+};
+var _elm_lang$html$Html_Attributes$draggable = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'draggable', value);
+};
+var _elm_lang$html$Html_Attributes$itemprop = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'itemprop', value);
+};
+var _elm_lang$html$Html_Attributes$tabindex = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'tabIndex',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$charset = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'charset', value);
+};
+var _elm_lang$html$Html_Attributes$height = function (value) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'height',
+		_elm_lang$core$Basics$toString(value));
+};
+var _elm_lang$html$Html_Attributes$width = function (value) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'width',
+		_elm_lang$core$Basics$toString(value));
+};
+var _elm_lang$html$Html_Attributes$formaction = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'formAction', value);
+};
+var _elm_lang$html$Html_Attributes$list = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'list', value);
+};
+var _elm_lang$html$Html_Attributes$minlength = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'minLength',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$maxlength = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'maxlength',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$size = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'size',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$form = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'form', value);
+};
+var _elm_lang$html$Html_Attributes$cols = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'cols',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$rows = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'rows',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$challenge = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'challenge', value);
+};
+var _elm_lang$html$Html_Attributes$media = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'media', value);
+};
+var _elm_lang$html$Html_Attributes$rel = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'rel', value);
+};
+var _elm_lang$html$Html_Attributes$datetime = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'datetime', value);
+};
+var _elm_lang$html$Html_Attributes$pubdate = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'pubdate', value);
+};
+var _elm_lang$html$Html_Attributes$colspan = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'colspan',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$rowspan = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$attribute,
+		'rowspan',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$manifest = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$attribute, 'manifest', value);
+};
+var _elm_lang$html$Html_Attributes$property = _elm_lang$virtual_dom$VirtualDom$property;
+var _elm_lang$html$Html_Attributes$stringProperty = F2(
+	function (name, string) {
+		return A2(
+			_elm_lang$html$Html_Attributes$property,
+			name,
+			_elm_lang$core$Json_Encode$string(string));
+	});
+var _elm_lang$html$Html_Attributes$class = function (name) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'className', name);
+};
+var _elm_lang$html$Html_Attributes$id = function (name) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'id', name);
+};
+var _elm_lang$html$Html_Attributes$title = function (name) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'title', name);
+};
+var _elm_lang$html$Html_Attributes$accesskey = function ($char) {
+	return A2(
+		_elm_lang$html$Html_Attributes$stringProperty,
+		'accessKey',
+		_elm_lang$core$String$fromChar($char));
+};
+var _elm_lang$html$Html_Attributes$dir = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'dir', value);
+};
+var _elm_lang$html$Html_Attributes$dropzone = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'dropzone', value);
+};
+var _elm_lang$html$Html_Attributes$lang = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'lang', value);
+};
+var _elm_lang$html$Html_Attributes$content = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'content', value);
+};
+var _elm_lang$html$Html_Attributes$httpEquiv = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'httpEquiv', value);
+};
+var _elm_lang$html$Html_Attributes$language = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'language', value);
+};
+var _elm_lang$html$Html_Attributes$src = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'src', value);
+};
+var _elm_lang$html$Html_Attributes$alt = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'alt', value);
+};
+var _elm_lang$html$Html_Attributes$preload = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'preload', value);
+};
+var _elm_lang$html$Html_Attributes$poster = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'poster', value);
+};
+var _elm_lang$html$Html_Attributes$kind = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'kind', value);
+};
+var _elm_lang$html$Html_Attributes$srclang = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'srclang', value);
+};
+var _elm_lang$html$Html_Attributes$sandbox = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'sandbox', value);
+};
+var _elm_lang$html$Html_Attributes$srcdoc = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'srcdoc', value);
+};
+var _elm_lang$html$Html_Attributes$type_ = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'type', value);
+};
+var _elm_lang$html$Html_Attributes$value = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'value', value);
+};
+var _elm_lang$html$Html_Attributes$defaultValue = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'defaultValue', value);
+};
+var _elm_lang$html$Html_Attributes$placeholder = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'placeholder', value);
+};
+var _elm_lang$html$Html_Attributes$accept = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'accept', value);
+};
+var _elm_lang$html$Html_Attributes$acceptCharset = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'acceptCharset', value);
+};
+var _elm_lang$html$Html_Attributes$action = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'action', value);
+};
+var _elm_lang$html$Html_Attributes$autocomplete = function (bool) {
+	return A2(
+		_elm_lang$html$Html_Attributes$stringProperty,
+		'autocomplete',
+		bool ? 'on' : 'off');
+};
+var _elm_lang$html$Html_Attributes$enctype = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'enctype', value);
+};
+var _elm_lang$html$Html_Attributes$method = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'method', value);
+};
+var _elm_lang$html$Html_Attributes$name = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'name', value);
+};
+var _elm_lang$html$Html_Attributes$pattern = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'pattern', value);
+};
+var _elm_lang$html$Html_Attributes$for = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'htmlFor', value);
+};
+var _elm_lang$html$Html_Attributes$max = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'max', value);
+};
+var _elm_lang$html$Html_Attributes$min = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'min', value);
+};
+var _elm_lang$html$Html_Attributes$step = function (n) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'step', n);
+};
+var _elm_lang$html$Html_Attributes$wrap = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'wrap', value);
+};
+var _elm_lang$html$Html_Attributes$usemap = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'useMap', value);
+};
+var _elm_lang$html$Html_Attributes$shape = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'shape', value);
+};
+var _elm_lang$html$Html_Attributes$coords = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'coords', value);
+};
+var _elm_lang$html$Html_Attributes$keytype = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'keytype', value);
+};
+var _elm_lang$html$Html_Attributes$align = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'align', value);
+};
+var _elm_lang$html$Html_Attributes$cite = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'cite', value);
+};
+var _elm_lang$html$Html_Attributes$href = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'href', value);
+};
+var _elm_lang$html$Html_Attributes$target = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'target', value);
+};
+var _elm_lang$html$Html_Attributes$downloadAs = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'download', value);
+};
+var _elm_lang$html$Html_Attributes$hreflang = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'hreflang', value);
+};
+var _elm_lang$html$Html_Attributes$ping = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'ping', value);
+};
+var _elm_lang$html$Html_Attributes$start = function (n) {
+	return A2(
+		_elm_lang$html$Html_Attributes$stringProperty,
+		'start',
+		_elm_lang$core$Basics$toString(n));
+};
+var _elm_lang$html$Html_Attributes$headers = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'headers', value);
+};
+var _elm_lang$html$Html_Attributes$scope = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$stringProperty, 'scope', value);
+};
+var _elm_lang$html$Html_Attributes$boolProperty = F2(
+	function (name, bool) {
+		return A2(
+			_elm_lang$html$Html_Attributes$property,
+			name,
+			_elm_lang$core$Json_Encode$bool(bool));
+	});
+var _elm_lang$html$Html_Attributes$hidden = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'hidden', bool);
+};
+var _elm_lang$html$Html_Attributes$contenteditable = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'contentEditable', bool);
+};
+var _elm_lang$html$Html_Attributes$spellcheck = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'spellcheck', bool);
+};
+var _elm_lang$html$Html_Attributes$async = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'async', bool);
+};
+var _elm_lang$html$Html_Attributes$defer = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'defer', bool);
+};
+var _elm_lang$html$Html_Attributes$scoped = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'scoped', bool);
+};
+var _elm_lang$html$Html_Attributes$autoplay = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'autoplay', bool);
+};
+var _elm_lang$html$Html_Attributes$controls = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'controls', bool);
+};
+var _elm_lang$html$Html_Attributes$loop = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'loop', bool);
+};
+var _elm_lang$html$Html_Attributes$default = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'default', bool);
+};
+var _elm_lang$html$Html_Attributes$seamless = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'seamless', bool);
+};
+var _elm_lang$html$Html_Attributes$checked = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'checked', bool);
+};
+var _elm_lang$html$Html_Attributes$selected = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'selected', bool);
+};
+var _elm_lang$html$Html_Attributes$autofocus = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'autofocus', bool);
+};
+var _elm_lang$html$Html_Attributes$disabled = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'disabled', bool);
+};
+var _elm_lang$html$Html_Attributes$multiple = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'multiple', bool);
+};
+var _elm_lang$html$Html_Attributes$novalidate = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'noValidate', bool);
+};
+var _elm_lang$html$Html_Attributes$readonly = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'readOnly', bool);
+};
+var _elm_lang$html$Html_Attributes$required = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'required', bool);
+};
+var _elm_lang$html$Html_Attributes$ismap = function (value) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'isMap', value);
+};
+var _elm_lang$html$Html_Attributes$download = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'download', bool);
+};
+var _elm_lang$html$Html_Attributes$reversed = function (bool) {
+	return A2(_elm_lang$html$Html_Attributes$boolProperty, 'reversed', bool);
+};
+var _elm_lang$html$Html_Attributes$classList = function (list) {
+	return _elm_lang$html$Html_Attributes$class(
+		A2(
+			_elm_lang$core$String$join,
+			' ',
+			A2(
+				_elm_lang$core$List$map,
+				_elm_lang$core$Tuple$first,
+				A2(_elm_lang$core$List$filter, _elm_lang$core$Tuple$second, list))));
+};
+var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
+
 var _elm_lang$html$Html_Events$keyCode = A2(_elm_lang$core$Json_Decode$field, 'keyCode', _elm_lang$core$Json_Decode$int);
 var _elm_lang$html$Html_Events$targetChecked = A2(
 	_elm_lang$core$Json_Decode$at,
@@ -9196,7 +9546,49 @@ var _ohanhi$remotedata_http$RemoteData_Http$Config = F3(
 		return {headers: a, withCredentials: b, timeout: c};
 	});
 
-var _user$project$JsonConverter$encodePlace = function (record) {
+var _user$project$Types$emptyAddPlaceForm = {name: '', cuisine: '', rating: ''};
+var _user$project$Types$init = {
+	ctor: '_Tuple2',
+	_0: {places: _krisajenkins$remotedata$RemoteData$NotAsked, addPlaceForm: _user$project$Types$emptyAddPlaceForm},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$Types$Model = F2(
+	function (a, b) {
+		return {places: a, addPlaceForm: b};
+	});
+var _user$project$Types$PlacesData = function (a) {
+	return {data: a};
+};
+var _user$project$Types$Place = F4(
+	function (a, b, c, d) {
+		return {rating: a, name: b, id: c, cuisine: d};
+	});
+var _user$project$Types$AddPlaceForm = F3(
+	function (a, b, c) {
+		return {name: a, cuisine: b, rating: c};
+	});
+var _user$project$Types$AddPlace = {ctor: 'AddPlace'};
+var _user$project$Types$AddPlaceFormUpdate = function (a) {
+	return {ctor: 'AddPlaceFormUpdate', _0: a};
+};
+var _user$project$Types$HandlePostPlace = function (a) {
+	return {ctor: 'HandlePostPlace', _0: a};
+};
+var _user$project$Types$HandlePlacesResponse = function (a) {
+	return {ctor: 'HandlePlacesResponse', _0: a};
+};
+var _user$project$Types$GetPlaces = {ctor: 'GetPlaces'};
+var _user$project$Types$Rating = function (a) {
+	return {ctor: 'Rating', _0: a};
+};
+var _user$project$Types$Cuisine = function (a) {
+	return {ctor: 'Cuisine', _0: a};
+};
+var _user$project$Types$Name = function (a) {
+	return {ctor: 'Name', _0: a};
+};
+
+var _user$project$JsonConverter$encodePlace1 = function (record) {
 	return _elm_lang$core$Json_Encode$object(
 		{
 			ctor: '::',
@@ -9216,42 +9608,26 @@ var _user$project$JsonConverter$encodePlace = function (record) {
 					ctor: '::',
 					_0: {
 						ctor: '_Tuple2',
-						_0: 'id',
-						_1: _elm_lang$core$Json_Encode$int(record.id)
+						_0: 'cuisine',
+						_1: _elm_lang$core$Json_Encode$string(record.cuisine)
 					},
-					_1: {
-						ctor: '::',
-						_0: {
-							ctor: '_Tuple2',
-							_0: 'cuisine',
-							_1: _elm_lang$core$Json_Encode$string(record.cuisine)
-						},
-						_1: {ctor: '[]'}
-					}
+					_1: {ctor: '[]'}
 				}
 			}
 		});
 };
-var _user$project$JsonConverter$encodePlaces = function (record) {
+var _user$project$JsonConverter$encodePlace = function (record) {
 	return _elm_lang$core$Json_Encode$object(
 		{
 			ctor: '::',
 			_0: {
 				ctor: '_Tuple2',
-				_0: 'data',
-				_1: _elm_lang$core$Json_Encode$list(
-					A2(_elm_lang$core$List$map, _user$project$JsonConverter$encodePlace, record.data))
+				_0: 'place',
+				_1: _user$project$JsonConverter$encodePlace1(record)
 			},
 			_1: {ctor: '[]'}
 		});
 };
-var _user$project$JsonConverter$PlacesData = function (a) {
-	return {data: a};
-};
-var _user$project$JsonConverter$Place = F4(
-	function (a, b, c, d) {
-		return {rating: a, name: b, id: c, cuisine: d};
-	});
 var _user$project$JsonConverter$decodePlace = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 	'cuisine',
@@ -9268,49 +9644,29 @@ var _user$project$JsonConverter$decodePlace = A3(
 				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 				'rating',
 				_elm_lang$core$Json_Decode$float,
-				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$JsonConverter$Place)))));
+				_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Types$Place)))));
+var _user$project$JsonConverter$encodePlaces = function (record) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'data',
+				_1: _elm_lang$core$Json_Encode$list(
+					A2(_elm_lang$core$List$map, _user$project$JsonConverter$encodePlace, record.data))
+			},
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$JsonConverter$decodePlacesData = A3(
 	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$required,
 	'data',
 	_elm_lang$core$Json_Decode$list(_user$project$JsonConverter$decodePlace),
-	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$JsonConverter$PlacesData));
+	_NoRedInk$elm_decode_pipeline$Json_Decode_Pipeline$decode(_user$project$Types$PlacesData));
 
-var _user$project$Luncher$init = {
-	ctor: '_Tuple2',
-	_0: {places: _krisajenkins$remotedata$RemoteData$NotAsked},
-	_1: _elm_lang$core$Platform_Cmd$none
-};
-var _user$project$Luncher$Model = function (a) {
-	return {places: a};
-};
-var _user$project$Luncher$HandlePlacesResponse = function (a) {
-	return {ctor: 'HandlePlacesResponse', _0: a};
-};
-var _user$project$Luncher$update = F2(
-	function (msg, model) {
-		var _p0 = msg;
-		if (_p0.ctor === 'HandlePlacesResponse') {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{places: _p0._0}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{places: _krisajenkins$remotedata$RemoteData$Loading}),
-				_1: A3(_ohanhi$remotedata_http$RemoteData_Http$get, '/api/places/', _user$project$Luncher$HandlePlacesResponse, _user$project$JsonConverter$decodePlacesData)
-			};
-		}
-	});
-var _user$project$Luncher$GetPlaces = {ctor: 'GetPlaces'};
 var _user$project$Luncher$viewPlaces = function (places) {
-	var _p1 = places;
-	switch (_p1.ctor) {
+	var _p0 = places;
+	switch (_p0.ctor) {
 		case 'Loading':
 			return _elm_lang$html$Html$text('Fetching places...');
 		case 'Success':
@@ -9318,19 +9674,19 @@ var _user$project$Luncher$viewPlaces = function (places) {
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					'Recieved places: ',
-					_elm_lang$core$Basics$toString(_p1._0)));
+					_elm_lang$core$Basics$toString(_p0._0)));
 		case 'Failure':
 			return _elm_lang$html$Html$text(
 				A2(
 					_elm_lang$core$Basics_ops['++'],
 					'This went wrong: ',
-					_elm_lang$core$Basics$toString(_p1._0)));
+					_elm_lang$core$Basics$toString(_p0._0)));
 		default:
 			return A2(
 				_elm_lang$html$Html$button,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html_Events$onClick(_user$project$Luncher$GetPlaces),
+					_0: _elm_lang$html$Html_Events$onClick(_user$project$Types$GetPlaces),
 					_1: {ctor: '[]'}
 				},
 				{
@@ -9340,24 +9696,226 @@ var _user$project$Luncher$viewPlaces = function (places) {
 				});
 	}
 };
+var _user$project$Luncher$addMsg = F2(
+	function (msg, str) {
+		return _user$project$Types$AddPlaceFormUpdate(
+			msg(str));
+	});
+var _user$project$Luncher$addPlaceForm = function (addPlaceForm) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$input,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$placeholder('name'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$value(addPlaceForm.name),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Events$onInput(
+								_user$project$Luncher$addMsg(_user$project$Types$Name)),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$input,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$placeholder('cuisine'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$value(addPlaceForm.cuisine),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onInput(
+									_user$project$Luncher$addMsg(_user$project$Types$Cuisine)),
+								_1: {ctor: '[]'}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$input,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$placeholder('rating'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$value(addPlaceForm.rating),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onInput(
+										_user$project$Luncher$addMsg(_user$project$Types$Rating)),
+									_1: {ctor: '[]'}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$button,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(_user$project$Types$AddPlace),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Nytt plejs'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
 var _user$project$Luncher$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _elm_lang$html$Html$text('From elm. '),
+			_0: A2(
+				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Lunchr'),
+					_1: {ctor: '[]'}
+				}),
 			_1: {
 				ctor: '::',
-				_0: _user$project$Luncher$viewPlaces(model.places),
-				_1: {ctor: '[]'}
+				_0: _user$project$Luncher$addPlaceForm(model.addPlaceForm),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Luncher$viewPlaces(model.places),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };
+var _user$project$Luncher$updateAddPlaceForm = F2(
+	function (addPlaceForm, msg) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
+			case 'Name':
+				return _elm_lang$core$Native_Utils.update(
+					addPlaceForm,
+					{name: _p1._0});
+			case 'Cuisine':
+				return _elm_lang$core$Native_Utils.update(
+					addPlaceForm,
+					{cuisine: _p1._0});
+			default:
+				return _elm_lang$core$Native_Utils.update(
+					addPlaceForm,
+					{rating: _p1._0});
+		}
+	});
+var _user$project$Luncher$placeFormToPlace = function (placeForm) {
+	var rating = A2(
+		_elm_lang$core$Result$withDefault,
+		0.0,
+		_elm_lang$core$String$toFloat(placeForm.rating));
+	return {rating: rating, name: placeForm.name, id: 0, cuisine: placeForm.cuisine};
+};
+var _user$project$Luncher$postNewPlace = function (place) {
+	var convertedPlace = _user$project$Luncher$placeFormToPlace(place);
+	return A4(
+		_ohanhi$remotedata_http$RemoteData_Http$post,
+		'/api/places/',
+		_user$project$Types$HandlePostPlace,
+		_user$project$JsonConverter$decodePlace,
+		_user$project$JsonConverter$encodePlace(convertedPlace));
+};
+var _user$project$Luncher$update = F2(
+	function (msg, model) {
+		var _p2 = msg;
+		switch (_p2.ctor) {
+			case 'HandlePlacesResponse':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							places: A2(
+								_krisajenkins$remotedata$RemoteData$map,
+								function (_) {
+									return _.data;
+								},
+								_p2._0)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'HandlePostPlace':
+				var _p3 = _p2._0;
+				switch (_p3.ctor) {
+					case 'Success':
+						var p = _elm_lang$core$Debug$log('Success..');
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{addPlaceForm: _user$project$Types$emptyAddPlaceForm, places: _krisajenkins$remotedata$RemoteData$Loading}),
+							_1: A3(_ohanhi$remotedata_http$RemoteData_Http$get, '/api/places/', _user$project$Types$HandlePlacesResponse, _user$project$JsonConverter$decodePlacesData)
+						};
+					case 'Failure':
+						var p = _elm_lang$core$Debug$log(
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								'Fail..',
+								_elm_lang$core$Basics$toString(_p3._0)));
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+					case 'Loading':
+						var p = _elm_lang$core$Debug$log('Loading..');
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+					default:
+						var p = _elm_lang$core$Debug$log('Not Asked..');
+						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			case 'GetPlaces':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{places: _krisajenkins$remotedata$RemoteData$Loading}),
+					_1: A3(_ohanhi$remotedata_http$RemoteData_Http$get, '/api/places/', _user$project$Types$HandlePlacesResponse, _user$project$JsonConverter$decodePlacesData)
+				};
+			case 'AddPlaceFormUpdate':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							addPlaceForm: A2(_user$project$Luncher$updateAddPlaceForm, model.addPlaceForm, _p2._0)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Luncher$postNewPlace(model.addPlaceForm)
+				};
+		}
+	});
 var _user$project$Luncher$main = _elm_lang$html$Html$program(
 	{
-		init: _user$project$Luncher$init,
-		subscriptions: function (_p2) {
+		init: _user$project$Types$init,
+		subscriptions: function (_p4) {
 			return _elm_lang$core$Platform_Sub$none;
 		},
 		update: _user$project$Luncher$update,
