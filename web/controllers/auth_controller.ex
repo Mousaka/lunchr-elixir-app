@@ -34,6 +34,6 @@ defmodule Luncher.AuthController do
 
   defp get_user!("google", token) do
     user_url = "https://www.googleapis.com/plus/v1/people/me/openIdConnect"
-    OAuth2.AccessToken.get!(token, user_url)
+    OAuth2.Client.get!(token, user_url)
   end
 end

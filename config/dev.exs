@@ -33,6 +33,8 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
+config :oauth2, debug: true
+
 # Configure your database
 config :luncher, Luncher.Repo,
   adapter: Ecto.Adapters.Postgres,
@@ -41,3 +43,8 @@ config :luncher, Luncher.Repo,
   database: "luncher_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :luncher, Google,
+    client_id: System.get_env("CLIENT_ID"),
+    client_secret: System.get_env("CLIENT_SECRET"),
+    redirect_uri: System.get_env("REDIRECT_URI")
