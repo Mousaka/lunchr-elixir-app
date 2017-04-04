@@ -28,4 +28,11 @@ defmodule Luncher.Router do
      resources "/places", PlaceController, except: [:new, :edit]
 
    end
+
+   scope "/auth", Luncher do
+     pipe_through :browser # Use the default browser stack
+
+     get "/:provider", AuthController, :index
+     get "/:provider/callback", AuthController, :callback
+   end
 end

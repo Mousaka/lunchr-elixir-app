@@ -1,1 +1,9 @@
-<div id="elm-main"></div>
+<!-- web/templates/page/index.html.eex -->
+<%= if @current_user do %>
+  <h2>Welcome, <%= @current_user["name"] %>!</h2>
+  <div id="elm-main"></div>
+<% else %>
+  <%= link to: auth_path(@conn, :index, "google"), class: "btn btn-primary" do %>
+    Sign in with Google
+  <% end %>
+<% end %>
