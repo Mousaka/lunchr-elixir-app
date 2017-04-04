@@ -25,7 +25,6 @@ defmodule Luncher.Endpoint do
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
-    headers: %{"Access-Control-Allow-Origin" => "*"},
     json_decoder: Poison
 
   plug Plug.MethodOverride
