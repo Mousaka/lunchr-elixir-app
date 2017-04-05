@@ -34,5 +34,6 @@ defmodule Luncher.Router do
 
      get "/:provider", AuthController, :index
      get "/:provider/callback", AuthController, :callback
+     delete "/logout", AuthController, :delete
    end
 end
