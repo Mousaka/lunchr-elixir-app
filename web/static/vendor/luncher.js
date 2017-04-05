@@ -9872,7 +9872,6 @@ var _user$project$Luncher$update = F2(
 				var _p3 = _p2._0;
 				switch (_p3.ctor) {
 					case 'Success':
-						var p = _elm_lang$core$Debug$log('Success..');
 						return {
 							ctor: '_Tuple2',
 							_0: _elm_lang$core$Native_Utils.update(
@@ -9881,17 +9880,10 @@ var _user$project$Luncher$update = F2(
 							_1: A3(_ohanhi$remotedata_http$RemoteData_Http$get, '/api/places/', _user$project$Types$HandlePlacesResponse, _user$project$JsonConverter$decodePlacesData)
 						};
 					case 'Failure':
-						var p = _elm_lang$core$Debug$log(
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								'Fail..',
-								_elm_lang$core$Basics$toString(_p3._0)));
 						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 					case 'Loading':
-						var p = _elm_lang$core$Debug$log('Loading..');
 						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 					default:
-						var p = _elm_lang$core$Debug$log('Not Asked..');
 						return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 				}
 			case 'GetPlaces':

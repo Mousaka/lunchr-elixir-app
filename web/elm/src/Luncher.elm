@@ -25,32 +25,16 @@ update msg model =
         HandlePostPlace data ->
             case data of
                 Success _ ->
-                    let
-                        p =
-                            Debug.log ("Success..")
-                    in
-                        ( { model | addPlaceForm = Types.emptyAddPlaceForm, places = Loading }, RemoteData.Http.get "/api/places/" HandlePlacesResponse decodePlacesData )
+                    ( { model | addPlaceForm = Types.emptyAddPlaceForm, places = Loading }, RemoteData.Http.get "/api/places/" HandlePlacesResponse decodePlacesData )
 
                 Failure err ->
-                    let
-                        p =
-                            Debug.log ("Fail.." ++ toString err)
-                    in
-                        ( model, Cmd.none )
+                    ( model, Cmd.none )
 
                 Loading ->
-                    let
-                        p =
-                            Debug.log ("Loading..")
-                    in
-                        ( model, Cmd.none )
+                    ( model, Cmd.none )
 
                 NotAsked ->
-                    let
-                        p =
-                            Debug.log ("Not Asked..")
-                    in
-                        ( model, Cmd.none )
+                    ( model, Cmd.none )
 
         GetPlaces ->
             ( { model | places = Loading }
