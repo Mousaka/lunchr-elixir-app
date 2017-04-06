@@ -27,6 +27,8 @@ defmodule Luncher.Router do
 
      resources "/places", PlaceController, except: [:new, :edit]
 
+     resources "/rats", RatController, except: [:new, :edit]
+     
    end
 
    scope "/auth", Luncher do

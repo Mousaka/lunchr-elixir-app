@@ -9,6 +9,11 @@ defmodule Luncher.Place do
     timestamps()
   end
 
+  def thai(query) do
+    from var in query,
+      where: var.cuisine == "thai"
+  end
+
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """
